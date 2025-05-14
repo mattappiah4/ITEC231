@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="matt.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Major Advancements</h1>
+    </header>
+
+<nav>
+<a href="index.html">Home</a> &nbsp;
+<a href="aboutme">About Me</a> &nbsp;
+<a href="resume.html">Resume</a> &nbsp;
+<a href="portfolio.html">Portfolio</a> &nbsp;
+<a href="contact.html">Contact</a> &nbsp;
+</nav>
+    <div class="condense">
+    <main>
+        <h2>Contact Information</h2>
+        <p>This page will be to show my contact information for any business inquires. Please feel free to fill out the survey below!</p>
+        
+        <div class="contact-info">
+    <div class="contact-item">
+        <strong>Phone Number</strong>
+        <p>301-624-3280</p>
+    </div>
+    <div class="contact-item">
+        <strong>Email</strong>
+        <p><a href="mailto:mattappiah4@gmail.com">mattappiah4@gmail.com</a></p>
+    </div>
+    <div class="contact-item">
+        <strong>LinkedIn</strong>
+        <p><a href="https://www.linkedin.com/in/matthew-appiah-6b1918172/">Matthew Appiah</a></p>
+    </div>
+</div>
+        <h3>How Can My Website be Improved?</h3>
+       <div class="center-form">
+        <form action="thankyou.html" method="POST"> 
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+          
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+          
+            <label for="message">Improvements:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+          
+            <input type="submit" value="Submit Improvements">
+          </form>
+       </div>
+          <script>
+            document.addEventListener("submit", function(e){
+                e.preventDefault();
+            const data={
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value, 
+                message: document.getElementById("message").value
+            };
+            localStorage.setItem("formData", JSON.stringify(data));
+            window.location.href="thankyou.html";
+        });
+          </script>
+          <br>
+          <br>
+          <br>
+        </div>
+
+    </main>
+</body>
+<footer>
+    <small>
+        <i>Copyright &copy; 2025 Major Advancements</i>
+        <br>
+        <a href="mattappiah4@gmail.com">mattappiah4@gmail.com</a>
+    </small>
+</footer>
+</html>
